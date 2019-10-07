@@ -1,7 +1,7 @@
 We see that the image is first encoded with AES-ECB. The vulnerability with AES-ECB is that when it is used to encode 
 images, one can easily see the original text. 
 
-![ecb is bad](placeholder)
+![ecb is bad](https://github.com/bleh05/pico19writeup/blob/master/AES-ABC/Tux_ecb.jpg)
 
 Therefore, we don't have to do any AES Cracking in this challenge. What does cause the randomness is in the python script,
 which is fittingly deigned "Addition Block Chaining".
