@@ -21,7 +21,7 @@ They tell us to use a simple SQL injection. Username is admin, and password will
 
 After trying a lot of things, my final payload is
 
->O:11:"permissions":2:{s:8:"username";s:5:"admin";s:8:"password";s:5:"' OR '1'='1";}
+>O:11:"permissions":2:{s:8:"username";s:5:"admin";s:8:"password";s:11:"' OR '1'='1";}
 
 Encode it in base64, and you get a flag.
 
