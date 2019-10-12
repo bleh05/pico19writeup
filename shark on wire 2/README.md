@@ -5,10 +5,15 @@ Solution:
 This problem was difficult in that the way the flag was stored was very arbitrary.
 Digging through the data, we notice two very interesting packets:
 
+![](https://github.com/bleh05/pico19writeup/blob/master/shark%20on%20wire%202/start.png)
+
+![](https://github.com/bleh05/pico19writeup/blob/master/shark%20on%20wire%202/end.png)
 
 From here it's just trial and error. We notice that the two packets have the same destination port, port 22.
 We filter by this port in the top bar that says "Apply a display filter". This gives us a particular conversation:
 udp.dstport==22
+![](https://github.com/bleh05/pico19writeup/blob/master/shark%20on%20wire%202/udpdstport.png)
+
 
 The info bar is giving us the source port, the destination port, and the length of the data. The source ports look very interesting.
 Turns out, if we take all the source ports, subtract 5000 from all of them, and then plot their corresponding ASCII values, we get the flag.
